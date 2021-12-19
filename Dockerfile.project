@@ -8,7 +8,7 @@ COPY network-logs.csv /opt/cyber_ai
 COPY gaussian_anomaly_detection.py /opt/cyber_ai
 
 #RUN yum install -y libX11.so.6 xorg-x11-server-Xorg git
-yum install -y wget git libXcomposite libXcursor libXi libXtst libXrandr alsa-lib mesa-libEGL libXdamage mesa-libGL libXScrnSaver
+RUN yum install -y wget git libXcomposite libXcursor libXi libXtst libXrandr alsa-lib mesa-libEGL libXdamage mesa-libGL libXScrnSaver
 RUN wget -P /opt/cyber_ai/anaconda3.sh  https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
 
 RUN chmod +x /opt/cyber_ai/anaconda3.sh
