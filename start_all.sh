@@ -1,5 +1,5 @@
 #!/bin/bash
-/root/anaconda/bin/streamlit run sniff_parse.py &
+/root/anaconda/bin/streamlit run ai_app.py &
 pid=`ps -ef | awk '/streamlit/{ print $2 }'`
 
 echo "Running.........."
