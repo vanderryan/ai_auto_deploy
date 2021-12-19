@@ -28,6 +28,7 @@ from sklearn import tree
 from streamlit_autorefresh import st_autorefresh
 from gaussian_anomaly_detection import GaussianAnomalyDetection
 import os
+from pathlib import Path
 
 def collect_packets():
     #socket for all TCP traffic
@@ -242,7 +243,16 @@ if __name__ == "__main__":
         #Parse tcp header:
         tcp(packet[0][34:54])
 
+  def check_for_files():
+    if os.path.exists('tcp_header.csv') != True:
+      Path('tcp_header.csv').touch()
+    if os.path.exists('ip_header.csv') != True:
+      Path('tcp_header.csv').touch()
+    if os.path.exists('ethernet_header.csv') != True:
+      Path('ethernet_header.csv').touch() 
+
 try:
+  check_for_files()
   collect = threading.Thread(target=collections)
   collect.start()
   #Wait for collections to start
