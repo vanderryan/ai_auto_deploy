@@ -9,8 +9,7 @@ services:
     hostname: cyberAI
     user: root
     ports:
-      - 8501:8501
-      - 8502:8502
+      - "8501:8501"
     privileged: true
     working_dir: /opt/cyber_ai
     command:
