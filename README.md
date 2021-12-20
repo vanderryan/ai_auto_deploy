@@ -8,7 +8,7 @@ GaussianAnomalyDetection is imported from https://github.com/trekhleb/homemade-m
 Streamlit auto refresh: https://github.com/kmcgrady/streamlit-autorefresh<br />
 Both repos above are licensed open source<br />
 
-Pre-requisites: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
+Pre-requisites:<br />
 Docker daemon<br />
 Docker-compose<br />
 Network collection is written for Linux sockets; Windows will be added in future release<br />
