@@ -247,10 +247,9 @@ if __name__ == "__main__":
     if os.path.exists('tcp_header.csv') != True:
       Path('tcp_header.csv').touch()
     if os.path.exists('ip_header.csv') != True:
-      Path('tcp_header.csv').touch()
+      Path('ip_header.csv').touch()
     if os.path.exists('ethernet_header.csv') != True:
-      Path('ethernet_header.csv').touch() 
-
+      Path('ethernet_header.csv').touch()
 try:
   check_for_files()
   collect = threading.Thread(target=collections)
